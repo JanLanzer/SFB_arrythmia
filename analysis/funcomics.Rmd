@@ -156,7 +156,40 @@ ggplot(tf_activities_stat_top25,aes(x = reorder(GeneID, NES), y = NES)) +
 
 ```
 
-```{r}
+```{r Identification of hclust}
+
+# cluster all: 
+cluster.plot= column_to_rownames(plot.pca[1:10], var= "sample")
+d= dist(cluster.plot, method = "euclidean")
+
+clust.pca= hclust(d = d, method = "ward.D2")
+plot(clust.pca)
+
+
+cut_the_tree = function(k, plot.pca, clust.obj){
+  clust.res= cbind("sampleID"= plot.pca$sample,
+      "tree" = cutree(clust.obj, k = k)) %>% as_tibble() %>% 
+    left_join(target) %>% 
+    left_join(rownames_to_column(cluster.plot, "sampleID"))
+
+print(table(clust.res$group, clust.res$tree))
+
+
+ggplot(clust.res,aes(x= PC1, y= PC2,color = tree))+
+  geom_point(size= 3)+
+  theme_minimal()+ 
+  labs(x= paste0("PC1 (",as.character(round(PCA$sdev[1]^2/sum(PCA$sdev^2)*100)),"%)"),
+       y= paste("PC2 (",as.character(round(PCA$sdev[2]^2/sum(PCA$sdev^2)*100)),"%)"))
+  
+  
+}
+
+cut_the_tree(2, plot.pca, clust.pca)
+cut_the_tree(3, plot.pca, clust.pca)
+cut_the_tree(4, plot.pca, clust.pca)
+cut_the_tree(5, plot.pca, clust.pca)
+
+
 
 ```
 
