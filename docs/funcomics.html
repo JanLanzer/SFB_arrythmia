@@ -472,16 +472,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreea70716e557222d5f738bb0bde66c3f42912495eftargetblanka70716ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/a70716e557222d5f738bb0bde66c3f42912495ef" target="_blank">a70716e</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatree1f8c61e43b388964723e1c4dec80e28208ecd076targetblank1f8c61ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/1f8c61e43b388964723e1c4dec80e28208ecd076" target="_blank">1f8c61e</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreea70716e557222d5f738bb0bde66c3f42912495eftargetblanka70716ea" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatree1f8c61e43b388964723e1c4dec80e28208ecd076targetblank1f8c61ea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/a70716e557222d5f738bb0bde66c3f42912495ef" target="_blank">a70716e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/1f8c61e43b388964723e1c4dec80e28208ecd076" target="_blank">1f8c61e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -536,6 +536,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/1f8c61e43b388964723e1c4dec80e28208ecd076/analysis/funcomics.Rmd" target="_blank">1f8c61e</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+<td>
+wflow_publish(“analysis/funcomics.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/JanLanzer/SFB_arrythmia/9e23da4a73150d792f8fe29b84f1d63805d040e3/docs/funcomics.html" target="_blank">9e23da4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -3164,6 +3198,63 @@ JanLanzer
 </table>
 </div>
 </div>
+<pre class="r"><code># cluster all: 
+cluster.plot= column_to_rownames(plot.pca[1:10], var= &quot;sample&quot;)
+d= dist(cluster.plot, method = &quot;euclidean&quot;)
+
+clust.pca= hclust(d = d, method = &quot;ward.D2&quot;)
+plot(clust.pca)</code></pre>
+<p><img src="figure/funcomics.Rmd/Identification%20of%20hclust-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>cut_the_tree = function(k, plot.pca, clust.obj){
+  clust.res= cbind(&quot;sampleID&quot;= plot.pca$sample,
+      &quot;tree&quot; = cutree(clust.obj, k = k)) %&gt;% as_tibble() %&gt;% 
+    left_join(target) %&gt;% 
+    left_join(rownames_to_column(cluster.plot, &quot;sampleID&quot;))
+
+print(table(clust.res$group, clust.res$tree))
+
+
+ggplot(clust.res,aes(x= PC1, y= PC2,color = tree))+
+  geom_point(size= 3)+
+  theme_minimal()+ 
+  labs(x= paste0(&quot;PC1 (&quot;,as.character(round(PCA$sdev[1]^2/sum(PCA$sdev^2)*100)),&quot;%)&quot;),
+       y= paste(&quot;PC2 (&quot;,as.character(round(PCA$sdev[2]^2/sum(PCA$sdev^2)*100)),&quot;%)&quot;))
+  
+  
+}
+
+cut_the_tree(2, plot.pca, clust.pca)</code></pre>
+<pre><code>Joining, by = &quot;sampleID&quot;
+Joining, by = &quot;sampleID&quot;</code></pre>
+<pre><code>    
+      1  2
+  AF 11  4
+  CT 15  0</code></pre>
+<p><img src="figure/funcomics.Rmd/Identification%20of%20hclust-2.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>cut_the_tree(3, plot.pca, clust.pca)</code></pre>
+<pre><code>Joining, by = &quot;sampleID&quot;
+Joining, by = &quot;sampleID&quot;</code></pre>
+<pre><code>    
+      1  2  3
+  AF  1 10  4
+  CT 13  2  0</code></pre>
+<p><img src="figure/funcomics.Rmd/Identification%20of%20hclust-3.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>cut_the_tree(4, plot.pca, clust.pca)</code></pre>
+<pre><code>Joining, by = &quot;sampleID&quot;
+Joining, by = &quot;sampleID&quot;</code></pre>
+<pre><code>    
+      1  2  3  4
+  AF  1  6  4  4
+  CT 13  2  0  0</code></pre>
+<p><img src="figure/funcomics.Rmd/Identification%20of%20hclust-4.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>cut_the_tree(5, plot.pca, clust.pca)</code></pre>
+<pre><code>Joining, by = &quot;sampleID&quot;
+Joining, by = &quot;sampleID&quot;</code></pre>
+<pre><code>    
+     1 2 3 4 5
+  AF 1 6 0 4 4
+  CT 9 2 4 0 0</code></pre>
+<p><img src="figure/funcomics.Rmd/Identification%20of%20hclust-5.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
