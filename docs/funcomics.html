@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -336,7 +338,13 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/JanLanzer/SFB_arrythmia">
+    <span class="fas fa-github"></span>
+     
+    Source code
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -464,16 +472,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongf0796ce"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> f0796ce </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreea70716e557222d5f738bb0bde66c3f42912495eftargetblanka70716ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/a70716e557222d5f738bb0bde66c3f42912495ef" target="_blank">a70716e</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongf0796ce" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreea70716e557222d5f738bb0bde66c3f42912495eftargetblanka70716ea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version f0796ce. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/a70716e557222d5f738bb0bde66c3f42912495ef" target="_blank">a70716e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -530,10 +538,27 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/JanLanzer/SFB_arrythmia/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/funcomics.html" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
-f0796ce
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/f0796ce6333b266cce81678723fdac014dbe6848/analysis/funcomics.Rmd" target="_blank">f0796ce</a>
 </td>
 <td>
 JanLanzer
@@ -562,6 +587,43 @@ ttable.corrected %&gt;% ggplot(., aes(x= logFC, y= -log10(adj.P.Val), col= col))
   geom_point()+
   theme_minimal()</code></pre>
 <p><img src="figure/funcomics.Rmd/volacano-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-volacano-1">
+Past versions of volacano-1.png
+</button>
+</p>
+<div id="fig-volacano-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/volacano-1.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>## change data type of target
 target= data$target[]
 
@@ -612,195 +674,2341 @@ map(colnames(data$target[2:length(colnames(data$target))]), function(x){
 })</code></pre>
 <pre><code>[[1]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-1">
+Past versions of PCA-1.png
+</button>
+</p>
+<div id="fig-PCA-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-1.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[2]]</code></pre>
 <pre><code>Warning: Removed 15 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-2">
+Past versions of PCA-2.png
+</button>
+</p>
+<div id="fig-PCA-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-2.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[3]]</code></pre>
 <pre><code>Warning: Removed 18 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-3">
+Past versions of PCA-3.png
+</button>
+</p>
+<div id="fig-PCA-3" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-3.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[4]]</code></pre>
 <pre><code>Warning: Removed 17 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-4.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-4">
+Past versions of PCA-4.png
+</button>
+</p>
+<div id="fig-PCA-4" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-4.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[5]]</code></pre>
 <pre><code>Warning: Removed 16 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-5.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-5">
+Past versions of PCA-5.png
+</button>
+</p>
+<div id="fig-PCA-5" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-5.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[6]]</code></pre>
 <pre><code>Warning: Removed 18 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-6.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-6">
+Past versions of PCA-6.png
+</button>
+</p>
+<div id="fig-PCA-6" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-6.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[7]]</code></pre>
 <pre><code>Warning: Removed 17 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-7.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-7">
+Past versions of PCA-7.png
+</button>
+</p>
+<div id="fig-PCA-7" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-7.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[8]]</code></pre>
 <pre><code>Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-8.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-8">
+Past versions of PCA-8.png
+</button>
+</p>
+<div id="fig-PCA-8" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-8.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[9]]</code></pre>
 <pre><code>Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-9.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-9">
+Past versions of PCA-9.png
+</button>
+</p>
+<div id="fig-PCA-9" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-9.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[10]]</code></pre>
 <pre><code>Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-10.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-10">
+Past versions of PCA-10.png
+</button>
+</p>
+<div id="fig-PCA-10" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-10.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[11]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-11.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-11">
+Past versions of PCA-11.png
+</button>
+</p>
+<div id="fig-PCA-11" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-11.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[12]]</code></pre>
 <pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-12.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-12">
+Past versions of PCA-12.png
+</button>
+</p>
+<div id="fig-PCA-12" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-12.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[13]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-13.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-13">
+Past versions of PCA-13.png
+</button>
+</p>
+<div id="fig-PCA-13" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-13.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[14]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-14.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-14">
+Past versions of PCA-14.png
+</button>
+</p>
+<div id="fig-PCA-14" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-14.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[15]]</code></pre>
 <pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-15.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-15">
+Past versions of PCA-15.png
+</button>
+</p>
+<div id="fig-PCA-15" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-15.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[16]]</code></pre>
 <pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-16.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-16">
+Past versions of PCA-16.png
+</button>
+</p>
+<div id="fig-PCA-16" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-16.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[17]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-17.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-17">
+Past versions of PCA-17.png
+</button>
+</p>
+<div id="fig-PCA-17" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-17.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[18]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-18.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-18">
+Past versions of PCA-18.png
+</button>
+</p>
+<div id="fig-PCA-18" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-18.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[19]]</code></pre>
 <pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-19.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-19">
+Past versions of PCA-19.png
+</button>
+</p>
+<div id="fig-PCA-19" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-19.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[20]]</code></pre>
 <pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-20.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-20">
+Past versions of PCA-20.png
+</button>
+</p>
+<div id="fig-PCA-20" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-20.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[21]]</code></pre>
 <pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-21.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-21">
+Past versions of PCA-21.png
+</button>
+</p>
+<div id="fig-PCA-21" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-21.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[22]]</code></pre>
 <pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-22.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-22">
+Past versions of PCA-22.png
+</button>
+</p>
+<div id="fig-PCA-22" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-22.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[23]]</code></pre>
 <pre><code>Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-23.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-23">
+Past versions of PCA-23.png
+</button>
+</p>
+<div id="fig-PCA-23" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-23.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[24]]</code></pre>
 <pre><code>Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-24.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-24">
+Past versions of PCA-24.png
+</button>
+</p>
+<div id="fig-PCA-24" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-24.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[25]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-25.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-25">
+Past versions of PCA-25.png
+</button>
+</p>
+<div id="fig-PCA-25" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-25.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[26]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-26.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-26">
+Past versions of PCA-26.png
+</button>
+</p>
+<div id="fig-PCA-26" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-26.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[27]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-27.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-27">
+Past versions of PCA-27.png
+</button>
+</p>
+<div id="fig-PCA-27" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-27.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[28]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-28.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-28">
+Past versions of PCA-28.png
+</button>
+</p>
+<div id="fig-PCA-28" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-28.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[29]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-29.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-29">
+Past versions of PCA-29.png
+</button>
+</p>
+<div id="fig-PCA-29" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-29.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[30]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-30.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-30">
+Past versions of PCA-30.png
+</button>
+</p>
+<div id="fig-PCA-30" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-30.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[31]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-31.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-31">
+Past versions of PCA-31.png
+</button>
+</p>
+<div id="fig-PCA-31" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-31.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[32]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-32.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-32">
+Past versions of PCA-32.png
+</button>
+</p>
+<div id="fig-PCA-32" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-32.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[33]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-33.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-33">
+Past versions of PCA-33.png
+</button>
+</p>
+<div id="fig-PCA-33" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-33.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[34]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-34.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-34">
+Past versions of PCA-34.png
+</button>
+</p>
+<div id="fig-PCA-34" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-34.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[35]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-35.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-35">
+Past versions of PCA-35.png
+</button>
+</p>
+<div id="fig-PCA-35" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-35.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[36]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-36.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-36">
+Past versions of PCA-36.png
+</button>
+</p>
+<div id="fig-PCA-36" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-36.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[37]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-37.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-37">
+Past versions of PCA-37.png
+</button>
+</p>
+<div id="fig-PCA-37" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-37.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[38]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-38.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-38">
+Past versions of PCA-38.png
+</button>
+</p>
+<div id="fig-PCA-38" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-38.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[39]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-39.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-39">
+Past versions of PCA-39.png
+</button>
+</p>
+<div id="fig-PCA-39" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-39.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[40]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-40.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-40">
+Past versions of PCA-40.png
+</button>
+</p>
+<div id="fig-PCA-40" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-40.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[41]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-41.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-41">
+Past versions of PCA-41.png
+</button>
+</p>
+<div id="fig-PCA-41" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-41.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[42]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-42.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-42">
+Past versions of PCA-42.png
+</button>
+</p>
+<div id="fig-PCA-42" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-42.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[43]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-43.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-43">
+Past versions of PCA-43.png
+</button>
+</p>
+<div id="fig-PCA-43" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-43.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[44]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-44.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-44">
+Past versions of PCA-44.png
+</button>
+</p>
+<div id="fig-PCA-44" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-44.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[45]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-45.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-45">
+Past versions of PCA-45.png
+</button>
+</p>
+<div id="fig-PCA-45" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-45.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[46]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-46.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-46">
+Past versions of PCA-46.png
+</button>
+</p>
+<div id="fig-PCA-46" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-46.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[47]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-47.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-47">
+Past versions of PCA-47.png
+</button>
+</p>
+<div id="fig-PCA-47" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-47.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[48]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-48.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-48">
+Past versions of PCA-48.png
+</button>
+</p>
+<div id="fig-PCA-48" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-48.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[49]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-49.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-49">
+Past versions of PCA-49.png
+</button>
+</p>
+<div id="fig-PCA-49" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-49.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[50]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-50.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-50">
+Past versions of PCA-50.png
+</button>
+</p>
+<div id="fig-PCA-50" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-50.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[51]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-51.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-51">
+Past versions of PCA-51.png
+</button>
+</p>
+<div id="fig-PCA-51" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-51.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[52]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-52.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-52">
+Past versions of PCA-52.png
+</button>
+</p>
+<div id="fig-PCA-52" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-52.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[53]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-53.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-53">
+Past versions of PCA-53.png
+</button>
+</p>
+<div id="fig-PCA-53" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-53.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[54]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-54.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-54">
+Past versions of PCA-54.png
+</button>
+</p>
+<div id="fig-PCA-54" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-54.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[55]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-55.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-55">
+Past versions of PCA-55.png
+</button>
+</p>
+<div id="fig-PCA-55" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-55.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[56]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-56.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-56">
+Past versions of PCA-56.png
+</button>
+</p>
+<div id="fig-PCA-56" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-56.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[57]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-57.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-57">
+Past versions of PCA-57.png
+</button>
+</p>
+<div id="fig-PCA-57" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-57.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>
 [[58]]</code></pre>
 <p><img src="figure/funcomics.Rmd/PCA-58.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-PCA-58">
+Past versions of PCA-58.png
+</button>
+</p>
+<div id="fig-PCA-58" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/PCA-58.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>library(pheatmap)
 
 ExpMat= data$GEX$voom_count
@@ -846,6 +3054,43 @@ This message can be suppressed by:
 
 Heatmap(t(prog_res), top_annotation = ha)</code></pre>
 <p><img src="figure/funcomics.Rmd/progeny-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-progeny-1">
+Past versions of progeny-1.png
+</button>
+</p>
+<div id="fig-progeny-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/progeny-1.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>## We load Dorothea Regulons
 data(dorothea_hs, package = &quot;dorothea&quot;)
 regulons &lt;- dorothea_hs %&gt;%
@@ -882,6 +3127,43 @@ ggplot(tf_activities_stat_top25,aes(x = reorder(GeneID, NES), y = NES)) +
         panel.grid.minor = element_blank()) +
     xlab(&quot;Transcription Factors&quot;)</code></pre>
 <p><img src="figure/funcomics.Rmd/dorothea-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-dorothea-1">
+Past versions of dorothea-1.png
+</button>
+</p>
+<div id="fig-dorothea-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/baa690ba4fb8be6e08017bae32877639a6daf6e1/docs/figure/funcomics.Rmd/dorothea-1.png" target="_blank">baa690b</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
