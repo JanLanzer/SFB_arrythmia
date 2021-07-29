@@ -472,16 +472,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatree55da40ace70824666e107dfc5bda3823d2c4e978targetblank55da40aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/55da40ace70824666e107dfc5bda3823d2c4e978" target="_blank">55da40a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreedf335afce6a2dc3591785f706ddb1753cd837212targetblankdf335afa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/df335afce6a2dc3591785f706ddb1753cd837212" target="_blank">df335af</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatree55da40ace70824666e107dfc5bda3823d2c4e978targetblank55da40aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreedf335afce6a2dc3591785f706ddb1753cd837212targetblankdf335afa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/55da40ace70824666e107dfc5bda3823d2c4e978" target="_blank">55da40a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/df335afce6a2dc3591785f706ddb1753cd837212" target="_blank">df335af</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -551,6 +551,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/df335afce6a2dc3591785f706ddb1753cd837212/analysis/cluster.Rmd" target="_blank">df335af</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+<td>
+wflow_publish(“analysis/cluster.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/JanLanzer/SFB_arrythmia/4bfadb4d9fa2630d570681a23dbc542451009603/docs/cluster.html" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/JanLanzer/SFB_arrythmia/blob/55da40ace70824666e107dfc5bda3823d2c4e978/analysis/cluster.Rmd" target="_blank">55da40a</a>
 </td>
 <td>
@@ -579,11 +613,85 @@ voom_count= data.all$GEX$voom_count
 ds. = cosine(voom_count)
 pheatmap(ds.)</code></pre>
 <p><img src="figure/cluster.Rmd/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-1-1">
+Past versions of unnamed-chunk-1-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-1-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/4bfadb4d9fa2630d570681a23dbc542451009603/docs/figure/cluster.Rmd/unnamed-chunk-1-1.png" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>#plot clustering on all GEX, outliers removed:
 voom_count= data.filt$GEX$voom_count
 ds. = cosine(voom_count)
 pheatmap(ds.)</code></pre>
 <p><img src="figure/cluster.Rmd/unnamed-chunk-1-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-1-2">
+Past versions of unnamed-chunk-1-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-1-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/4bfadb4d9fa2630d570681a23dbc542451009603/docs/figure/cluster.Rmd/unnamed-chunk-1-2.png" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code># #eucledian:
 # ds. = dist(t(voom_count))
 # pheatmap(ds.)
@@ -662,6 +770,43 @@ Estimating ECDFs with Gaussian kernels
   theme(axis.text.x = element_text(angle= 60, hjust= 1
   ))</code></pre>
 <p><img src="figure/cluster.Rmd/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-2-1">
+Past versions of unnamed-chunk-2-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/4bfadb4d9fa2630d570681a23dbc542451009603/docs/figure/cluster.Rmd/unnamed-chunk-2-1.png" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code># Identifying AF clusters with NABA scores
 AF.NABA= .R %&gt;% 
   left_join(data.all$target %&gt;% rename(condition= sampleID)) %&gt;%
@@ -671,6 +816,43 @@ AF.NABA= .R %&gt;%
 
 pheatmap(AF.NABA)</code></pre>
 <p><img src="figure/cluster.Rmd/unnamed-chunk-2-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-2-2">
+Past versions of unnamed-chunk-2-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-2-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/4bfadb4d9fa2630d570681a23dbc542451009603/docs/figure/cluster.Rmd/unnamed-chunk-2-2.png" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>samples 1.28, 1-29, 1.26 and 1.27 show high fibrosis and low gene expression of the submitted prior</p>
 </div>
 <div id="now-we-will-compare-actual-gene-expression-values-for-the-genes-of-interest" class="section level1">
@@ -680,6 +862,43 @@ pheatmap(AF.NABA)</code></pre>
 x= voom_count[grepl(&quot;KCNK&quot;, rownames(voom_count)),AF.patients]
 pheatmap(x)</code></pre>
 <p><img src="figure/cluster.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
+Past versions of unnamed-chunk-3-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/4bfadb4d9fa2630d570681a23dbc542451009603/docs/figure/cluster.Rmd/unnamed-chunk-3-1.png" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>sort(voom_count[&quot;KCNK3&quot;,AF.patients])</code></pre>
 <pre><code>   19_AF  1.24_AF  1.26_AF  1.25_AF  1.29_AF  1.22_AF  1.28_AF  1.30_AF 
 4.826558 5.417947 5.431127 5.601070 5.658536 5.712217 5.807522 5.865039 
@@ -1042,7 +1261,82 @@ pheatmap(dec.res.m)
 pheatmap(dec.res.m[grepl(&quot;ETV&quot;, rownames(dec.res.m)), ])
 
 })</code></pre>
-<p><img src="figure/cluster.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/cluster.Rmd/unnamed-chunk-4-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-4-1">
+Past versions of unnamed-chunk-4-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-4-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/4bfadb4d9fa2630d570681a23dbc542451009603/docs/figure/cluster.Rmd/unnamed-chunk-4-1.png" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-4-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-4-2">
+Past versions of unnamed-chunk-4-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-4-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/4bfadb4d9fa2630d570681a23dbc542451009603/docs/figure/cluster.Rmd/unnamed-chunk-4-2.png" target="_blank">4bfadb4</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre><code>[[1]]</code></pre>
 <p>Patients 1.28, 1-29, 1.26 and 1.27 show high ETV4, ETV6, and ETV7 activity. Same patients as in fibrosis analysis Careful, some ETV regulons are inferred and might be inacurate. Patient 19_AF is a bit inbetween</p>
 </div>
@@ -1104,7 +1398,7 @@ test.res %&gt;% arrange(desc(logp)) %&gt;% print(n=200)</code></pre>
 cont.target= target[,1:35] %&gt;% select(-sampleID)
 
 ttest.res= map(colnames(cont.target), function(x){
-  print(x)
+  #print(x)
   if( is.numeric(target[[x]])){
     fib.samples= target %&gt;% filter(sampleID %in% cluster.fib)
     n.fib=  target %&gt;% filter(!sampleID %in% cluster.fib)
@@ -1117,42 +1411,8 @@ ttest.res= map(colnames(cont.target), function(x){
     #return(get.it)
   }
   return(NULL)
-})</code></pre>
-<pre><code>[1] &quot;Age&quot;
-[1] &quot;LV_EF&quot;
-[1] &quot;LA.diameter&quot;
-[1] &quot;LV.ESD&quot;
-[1] &quot;LV.EDD&quot;
-[1] &quot;Rear.wall.diameter&quot;
-[1] &quot;Septum.diameter&quot;
-[1] &quot;Height&quot;
-[1] &quot;Weight&quot;
-[1] &quot;BMI&quot;
-[1] &quot;Creatinine&quot;
-[1] &quot;MDRD&quot;
-[1] &quot;GFR(CKD.E)&quot;
-[1] &quot;Urea&quot;
-[1] &quot;TroponinT&quot;
-[1] &quot;LDH&quot;
-[1] &quot;AST/GOT&quot;
-[1] &quot;ALT/GPT&quot;
-[1] &quot;Alkalinephosphatase&quot;
-[1] &quot;GGT&quot;
-[1] &quot;Bilirubintotal&quot;
-[1] &quot;Pancreaticamylase&quot;
-[1] &quot;Lipase&quot;
-[1] &quot;Uricacid&quot;
-[1] &quot;CRP&quot;
-[1] &quot;Leukocytes&quot;
-[1] &quot;Hemoglobin&quot;
-[1] &quot;Hematocrit&quot;
-[1] &quot;RBC&quot;
-[1] &quot;HypochromousRBC&quot;
-[1] &quot;RDW.CV&quot;
-[1] &quot;MCV&quot;
-[1] &quot;MCH&quot;
-[1] &quot;MCHC&quot;</code></pre>
-<pre class="r"><code>names(ttest.res) = colnames(cont.target)
+})
+names(ttest.res) = colnames(cont.target)
 ttest.res= do.call(rbind, ttest.res) 
 colnames(ttest.res)= c(&quot;t&quot;, &quot;p.val&quot;)
 ttest.res= ttest.res%&gt;%as.data.frame()  %&gt;% rownames_to_column(&quot;feature&quot;) %&gt;% as_tibble()  %&gt;%  mutate(logp= -log10(p.val))
