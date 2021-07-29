@@ -202,7 +202,7 @@ test.res %>% arrange(desc(logp)) %>% print(n=200)
 cont.target= target[,1:35] %>% select(-sampleID)
 
 ttest.res= map(colnames(cont.target), function(x){
-  print(x)
+  #print(x)
   if( is.numeric(target[[x]])){
     fib.samples= target %>% filter(sampleID %in% cluster.fib)
     n.fib=  target %>% filter(!sampleID %in% cluster.fib)
