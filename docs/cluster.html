@@ -381,7 +381,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-07-29
+<strong>Last updated:</strong> 2021-08-03
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -472,16 +472,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreedf335afce6a2dc3591785f706ddb1753cd837212targetblankdf335afa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/df335afce6a2dc3591785f706ddb1753cd837212" target="_blank">df335af</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatree9fc2568bd22572ff36372d38997691d681abc29atargetblank9fc2568a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/9fc2568bd22572ff36372d38997691d681abc29a" target="_blank">9fc2568</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatreedf335afce6a2dc3591785f706ddb1753cd837212targetblankdf335afa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomJanLanzerSFBarrythmiatree9fc2568bd22572ff36372d38997691d681abc29atargetblank9fc2568a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/df335afce6a2dc3591785f706ddb1753cd837212" target="_blank">df335af</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/JanLanzer/SFB_arrythmia/tree/9fc2568bd22572ff36372d38997691d681abc29a" target="_blank">9fc2568</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -490,6 +490,7 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+    Ignored:    analysis/figure/
     Ignored:    data/data.limma.rds
     Ignored:    data/data.limma_filt.rds
     Ignored:    data/gene_id_symbol_dictionary_July2021.rds
@@ -504,6 +505,10 @@ Untracked files:
     Untracked:  data/genes_felix.csv
     Untracked:  data/raw/
     Untracked:  omnipathr-log/
+    Untracked:  output/DEA_AF1_AF2.csv
+    Untracked:  output/ETV_regs.xls
+    Untracked:  output/KCNK3_potentialTFs.csv
+    Untracked:  output/PC1_loadings_outlier.csv
 
 Unstaged changes:
     Modified:   analysis/funcomics.Rmd
@@ -546,6 +551,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/JanLanzer/SFB_arrythmia/blob/9fc2568bd22572ff36372d38997691d681abc29a/analysis/cluster.Rmd" target="_blank">9fc2568</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-08-03
+</td>
+<td>
+wflow_publish(“analysis/cluster.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/JanLanzer/SFB_arrythmia/787dca5cbf96cade4a217e135c73092c6253b723/docs/cluster.html" target="_blank">787dca5</a>
+</td>
+<td>
+JanLanzer
+</td>
+<td>
+2021-07-29
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -692,6 +731,10 @@ JanLanzer
 </table>
 </div>
 </div>
+<pre class="r"><code>af.patients= data.filt$target %&gt;% filter(group== &quot;AF&quot;) %&gt;% pull(sampleID)
+ds. = cosine(voom_count[,af.patients])
+pheatmap(ds.)</code></pre>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-1-3.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># #eucledian:
 # ds. = dist(t(voom_count))
 # pheatmap(ds.)
@@ -734,7 +777,9 @@ naba_gsets2= do.call(rbind, x) %&gt;%
 all_genesets= rbind(naba_gsets2, prior.k)
 
 #enrich_ 
-.R= decouple(data.filt$GEX$voom_count, network = all_genesets, .source = gene.set, .target = value, statistics = c(&quot;gsva&quot;)) </code></pre>
+
+statistics = c(&quot;gsva&quot;, &quot;scira&quot;)
+.R= decouple(data.filt$GEX$voom_count, network = all_genesets, .source = gene.set, .target = value, statistics = statistics, include_time = F) </code></pre>
 <pre><code>Estimating GSVA scores for 11 gene sets.
 Estimating ECDFs with Gaussian kernels
 
@@ -766,6 +811,7 @@ Estimating ECDFs with Gaussian kernels
 .R %&gt;% 
   left_join(data.all$target %&gt;% rename(condition= sampleID)) %&gt;% 
   ggplot(.,aes(x=tf, y= score, fill = group))+
+  facet_grid(rows= &quot;statistic&quot;)+
   geom_boxplot()+
   theme(axis.text.x = element_text(angle= 60, hjust= 1
   ))</code></pre>
@@ -808,13 +854,17 @@ JanLanzer
 </div>
 </div>
 <pre class="r"><code># Identifying AF clusters with NABA scores
-AF.NABA= .R %&gt;% 
-  left_join(data.all$target %&gt;% rename(condition= sampleID)) %&gt;%
-  filter(group == &quot;AF&quot;) %&gt;% 
-  select(condition, score, tf) %&gt;%
-  pivot_wider( names_from= condition, values_from = score) %&gt;% column_to_rownames(&quot;tf&quot;)
-
-pheatmap(AF.NABA)</code></pre>
+map(statistics, function(x){
+  AF.NABA= .R %&gt;%
+    filter(statistic== x)%&gt;%
+    left_join(data.all$target %&gt;% rename(condition= sampleID)) %&gt;%
+    filter(group == &quot;AF&quot;) %&gt;% 
+    select(condition, score, tf) %&gt;%
+    pivot_wider( names_from= condition, values_from = score) %&gt;% column_to_rownames(&quot;tf&quot;)
+  
+  pheatmap(AF.NABA)
+  
+})</code></pre>
 <p><img src="figure/cluster.Rmd/unnamed-chunk-2-2.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-2-2">
@@ -853,14 +903,29 @@ JanLanzer
 </table>
 </div>
 </div>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-2-3.png" width="672" style="display: block; margin: auto;" /></p>
+<pre><code>[[1]]
+
+[[2]]</code></pre>
 <p>samples 1.28, 1-29, 1.26 and 1.27 show high fibrosis and low gene expression of the submitted prior</p>
 </div>
 <div id="now-we-will-compare-actual-gene-expression-values-for-the-genes-of-interest" class="section level1">
 <h1>now we will compare actual gene expression values for the genes of interest</h1>
 <pre class="r"><code>AF.patients= data.filt$target %&gt;% filter(group== &quot;AF&quot;) %&gt;% pull(sampleID)
+all.patients=data.filt$target$sampleID 
+cal_z_score &lt;- function(x){
+  (x - mean(x)) / sd(x)
+}
+ 
+plot.heatmap.for.genes= function(gene, patients){
+  x= voom_count[grepl(gene, rownames(voom_count)),patients]
+  data_subset_norm &lt;- t(apply(x, 1, cal_z_score))
 
-x= voom_count[grepl(&quot;KCNK&quot;, rownames(voom_count)),AF.patients]
-pheatmap(x)</code></pre>
+  pheatmap(data_subset_norm)
+  pheatmap(x)
+}
+
+plot.heatmap.for.genes(&quot;KCNK&quot;, all.patients)</code></pre>
 <p><img src="figure/cluster.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
@@ -899,14 +964,16 @@ JanLanzer
 </table>
 </div>
 </div>
-<pre class="r"><code>sort(voom_count[&quot;KCNK3&quot;,AF.patients])</code></pre>
-<pre><code>   19_AF  1.24_AF  1.26_AF  1.25_AF  1.29_AF  1.22_AF  1.28_AF  1.30_AF 
-4.826558 5.417947 5.431127 5.601070 5.658536 5.712217 5.807522 5.865039 
- 1.31_AF  1.27_AF  1.23_AF 
-5.889483 5.906707 6.341394 </code></pre>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-3-2.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>plot.heatmap.for.genes(&quot;KCNK&quot;, AF.patients)</code></pre>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-3-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/cluster.Rmd/unnamed-chunk-3-4.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>plot.heatmap.for.genes(&quot;ETV&quot;, all.patients)</code></pre>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-3-5.png" width="672" style="display: block; margin: auto;" /><img src="figure/cluster.Rmd/unnamed-chunk-3-6.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>plot.heatmap.for.genes(&quot;ETV&quot;, AF.patients)</code></pre>
+<p><img src="figure/cluster.Rmd/unnamed-chunk-3-7.png" width="672" style="display: block; margin: auto;" /><img src="figure/cluster.Rmd/unnamed-chunk-3-8.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="now-we-will-cluster-af-patients-based-on-tf-activity" class="section level1">
-<h1>now we will cluster AF patients based on TF activity</h1>
+<div id="cluster-af-patients-based-on-tf-activity" class="section level1">
+<h1>cluster AF patients based on TF activity</h1>
 <pre class="r"><code>data= data.filt
 
 target= data$target
@@ -937,11 +1004,26 @@ regulons.extended = rbind(regulons, dorothea_hs %&gt;% filter(grepl(&quot;ETV&qu
                                                            !confidence %in% c(&quot;A&quot;, &quot;B&quot;,&quot;C&quot;)) 
 ) %&gt;% mutate(likelihood=1)
 
-##choose mehtod
 
+#### save regulons for inspection:
+ETV_regulons=regulons.extended  %&gt;% filter(grepl(&quot;ETV&quot;, tf))
+ETV_regilons_list= lapply(unique(ETV_regulons$tf), function(x){ETV_regulons %&gt;% filter(tf == x)})
+names(ETV_regilons_list)= unique(ETV_regulons$tf)
+library(XML)
+WriteXLS::WriteXLS(ETV_regilons_list, ExcelFileName = &quot;output//ETV_regs.xls&quot;)
+# now check kcnk3
+dorothea_hs %&gt;% filter(target == &quot;KCNK3&quot;) %&gt;% write.csv(., file =&quot;output/KCNK3_potentialTFs.csv&quot;)
+
+##choose mehtod
 meth= c(&quot;scira&quot;, &quot;gsva&quot;)
 
-dec.res= decouple(scale(data$GEX$voom_count,center = T, scale = T), network = regulons.extended,statistics = meth, .source =tf, .target = target )</code></pre>
+# perform enrichment:
+dec.res= decouple(scale(data$GEX$voom_count,center = T, scale = T), 
+                  network = regulons.extended,
+                  statistics = meth, 
+                  .source =tf,
+                  .target = target,
+                  include_time = F)</code></pre>
 <pre><code>Estimating GSVA scores for 297 gene sets.
 Estimating ECDFs with Gaussian kernels
 
@@ -1338,77 +1420,242 @@ JanLanzer
 </div>
 </div>
 <pre><code>[[1]]</code></pre>
-<p>Patients 1.28, 1-29, 1.26 and 1.27 show high ETV4, ETV6, and ETV7 activity. Same patients as in fibrosis analysis Careful, some ETV regulons are inferred and might be inacurate. Patient 19_AF is a bit inbetween</p>
+<p>Patients 1.28, 1-29, 1.26 and 1.27 show high ETV4, ETV6, and ETV7 activity. Same patients as in fibrosis analysis Careful, some ETV regulons are inferred and might be less accurate. Patient 19_AF is a bit inbetween</p>
 </div>
-<div id="next-we-will-use-these-tow-patient-groups-of-af-to-test-for-clinical-variables." class="section level1">
-<h1>Next we will use these tow patient groups of AF to test for clinical variables.</h1>
+<div id="next-we-will-use-these-two-patient-groups-of-af-to-test-for-clinical-variables." class="section level1">
+<h1>Next we will use these two patient groups of AF to test for clinical variables.</h1>
 <pre class="r"><code>cluster.fib= c(&quot;1.28_AF&quot;, &quot;1.29_AF&quot;, &quot;1.26_AF&quot;,&quot;1.27_AF&quot;)
 target= data.filt$target
+
 target = target %&gt;% filter(group ==&quot;AF&quot;) %&gt;% mutate(cluster= ifelse(sampleID %in% cluster.fib, &quot;fibrotic&quot;, &quot;non.fibrotic&quot;))
 
-#which(colnames(target) == &quot;AFstage&quot;)
+### For categorical data, a chi sqr test is performed om the cluster variable: 
+
 fact.target= target[,37:length(colnames(target))] %&gt;% mutate_all(as.factor) %&gt;% select(-cluster)
 
 test.res= map(colnames(fact.target), function(x){
   #print(x)
   if(length(unique(target[[x]]))&gt;1){
-    test.res= fisher.test(target[[x]], target$cluster)
-    get.it= c(test.res$p.value, test.res$estimate)
-    return(get.it)
+    test.res= chisq.test(target[[x]], target$cluster)
+    
+    #get.it= c(test.res$p.value, test.res$statistic)
+    return(test.res)
   }
   return(NULL)
-})
+})</code></pre>
+<pre><code>Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
 
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect
+
+Warning in chisq.test(target[[x]], target$cluster): Chi-squared approximation
+may be incorrect</code></pre>
+<pre class="r"><code>#test.res[[1]]$statistic
 names(test.res) = colnames(fact.target)
 test.res= do.call(rbind, test.res) 
-colnames(test.res)= c(&quot;p.val&quot;, &quot;odds.ratio&quot;)
-test.res= test.res%&gt;%as.data.frame()  %&gt;% rownames_to_column(&quot;feature&quot;) %&gt;% as_tibble()  %&gt;%  mutate(logp= -log10(p.val))
-test.res %&gt;% arrange(desc(logp)) %&gt;% print(n=200)</code></pre>
-<pre><code># A tibble: 21 x 4
-   feature                   p.val odds.ratio   logp
-   &lt;chr&gt;                     &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
- 1 &quot;Pulmonaryhypertension&quot;  0.0606      0     1.22  
- 2 &quot;Smoker&quot;                 0.273       0.273 0.564 
- 3 &quot;Corononaryheartdisease&quot; 0.364       0.364 0.439 
- 4 &quot;Myocardialinfarction&quot;   0.364       0     0.439 
- 5 &quot;Antiplateletdrug&quot;       0.364     Inf     0.439 
- 6 &quot;DOAC&quot;                   0.364       0     0.439 
- 7 &quot;Femalegender&quot;           0.491     Inf     0.309 
- 8 &quot;Type.IIdiabetes&quot;        0.491       0.202 0.309 
- 9 &quot;AVR&quot;                    0.545       0.284 0.263 
-10 &quot;Hyperlipidemia&quot;         0.545       0.284 0.263 
-11 &quot;ACEinhibitor&quot;           0.545       3.52  0.263 
-12 &quot;CABG&quot;                   0.576       2.29  0.240 
-13 &quot;Heartfailure&quot;           0.818       0.818 0.0872
-14 &quot;PCI&quot;                    1         Inf     0     
-15 &quot;COPD&quot;                   1           1.18  0     
-16 &quot;AT1antagonist&quot;          1           1.18  0     
-17 &quot;\\beta.blocker&quot;         1           1.87  0     
-18 &quot;Ca.antagonist&quot;          1         Inf     0     
-19 &quot;Loopdiuretic&quot;           1           1.87  0     
-20 &quot;Marcumar&quot;               1           0.535 0     
-21 &quot;Statin&quot;                 1           1.87  0     </code></pre>
-<pre class="r"><code>#test.res= fisher.test(x= target$cluster, y= target$CABG)
-
-
-
-### now run ANOVas
-
-
+test.res= test.res%&gt;%as.data.frame()  %&gt;% arrange(p.value) #%&gt;% print(n=200)
+#test.res= fisher.test(x= target$cluster, y= target$CABG)
+print(test.res)</code></pre>
+<pre><code>                          statistic parameter    p.value
+Heartfailure               2.933333         3  0.4020185
+Corononaryheartdisease     3.653571         3  0.3013838
+Smoker                     4.301786         2  0.1163802
+Femalegender              0.1364087         1  0.7118776
+AVR                       0.1604167         1  0.6887732
+Hyperlipidemia            0.1604167         1  0.6887732
+ACEinhibitor              0.1604167         1  0.6887732
+CABG                    0.003507653         1  0.9527725
+Myocardialinfarction     0.08839286         1  0.7662303
+Antiplateletdrug         0.08839286         1  0.7662303
+DOAC                     0.08839286         1  0.7662303
+PCI                    5.336257e-31         1          1
+Ca.antagonist          5.336257e-31         1          1
+Type.IIdiabetes           0.3314732         1  0.5647929
+Pulmonaryhypertension      2.753274         1 0.09705552
+COPD                              0         1          1
+AT1antagonist                     0         1          1
+\\beta.blocker         1.667916e-31         1          1
+Loopdiuretic           1.667916e-31         1          1
+Marcumar               1.667916e-31         1          1
+Statin                 1.667916e-31         1          1
+                                                                             method
+Heartfailure                                             Pearson&#39;s Chi-squared test
+Corononaryheartdisease                                   Pearson&#39;s Chi-squared test
+Smoker                                                   Pearson&#39;s Chi-squared test
+Femalegender           Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+AVR                    Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Hyperlipidemia         Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+ACEinhibitor           Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+CABG                   Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Myocardialinfarction   Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Antiplateletdrug       Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+DOAC                   Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+PCI                    Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Ca.antagonist          Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Type.IIdiabetes        Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Pulmonaryhypertension  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+COPD                   Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+AT1antagonist          Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+\\beta.blocker         Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Loopdiuretic           Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Marcumar               Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+Statin                 Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+                                            data.name               observed
+Heartfailure           target[[x]] and target$cluster 0, 0, 3, 1, 2, 1, 2, 2
+Corononaryheartdisease target[[x]] and target$cluster 1, 1, 0, 2, 1, 0, 3, 3
+Smoker                 target[[x]] and target$cluster       1, 3, 0, 4, 1, 2
+Femalegender           target[[x]] and target$cluster             4, 0, 5, 2
+AVR                    target[[x]] and target$cluster             1, 3, 4, 3
+Hyperlipidemia         target[[x]] and target$cluster             1, 3, 4, 3
+ACEinhibitor           target[[x]] and target$cluster             3, 1, 3, 4
+CABG                   target[[x]] and target$cluster             2, 2, 2, 5
+Myocardialinfarction   target[[x]] and target$cluster             3, 1, 7, 0
+Antiplateletdrug       target[[x]] and target$cluster             1, 3, 0, 7
+DOAC                   target[[x]] and target$cluster             3, 1, 7, 0
+PCI                    target[[x]] and target$cluster             4, 0, 6, 1
+Ca.antagonist          target[[x]] and target$cluster             4, 0, 6, 1
+Type.IIdiabetes        target[[x]] and target$cluster             2, 2, 6, 1
+Pulmonaryhypertension  target[[x]] and target$cluster             0, 4, 5, 2
+COPD                   target[[x]] and target$cluster             3, 1, 5, 2
+AT1antagonist          target[[x]] and target$cluster             3, 1, 5, 2
+\\beta.blocker         target[[x]] and target$cluster             1, 3, 1, 6
+Loopdiuretic           target[[x]] and target$cluster             1, 3, 1, 6
+Marcumar               target[[x]] and target$cluster             3, 1, 6, 1
+Statin                 target[[x]] and target$cluster             1, 3, 1, 6
+                                                                                                     expected
+Heartfailure           0.7272727, 0.3636364, 1.8181818, 1.0909091, 1.2727273, 0.6363636, 3.1818182, 1.9090909
+Corononaryheartdisease 0.7272727, 0.3636364, 1.0909091, 1.8181818, 1.2727273, 0.6363636, 1.9090909, 3.1818182
+Smoker                                       1.8181818, 1.4545455, 0.7272727, 3.1818182, 2.5454545, 1.2727273
+Femalegender                                                       3.2727273, 0.7272727, 5.7272727, 1.2727273
+AVR                                                                    1.818182, 2.181818, 3.181818, 3.818182
+Hyperlipidemia                                                         1.818182, 2.181818, 3.181818, 3.818182
+ACEinhibitor                                                           2.181818, 1.818182, 3.818182, 3.181818
+CABG                                                                   1.454545, 2.545455, 2.545455, 4.454545
+Myocardialinfarction                                               3.6363636, 0.3636364, 6.3636364, 0.6363636
+Antiplateletdrug                                                   0.3636364, 3.6363636, 0.6363636, 6.3636364
+DOAC                                                               3.6363636, 0.3636364, 6.3636364, 0.6363636
+PCI                                                                3.6363636, 0.3636364, 6.3636364, 0.6363636
+Ca.antagonist                                                      3.6363636, 0.3636364, 6.3636364, 0.6363636
+Type.IIdiabetes                                                        2.909091, 1.090909, 5.090909, 1.909091
+Pulmonaryhypertension                                                  1.818182, 2.181818, 3.181818, 3.818182
+COPD                                                                   2.909091, 1.090909, 5.090909, 1.909091
+AT1antagonist                                                          2.909091, 1.090909, 5.090909, 1.909091
+\\beta.blocker                                                     0.7272727, 3.2727273, 1.2727273, 5.7272727
+Loopdiuretic                                                       0.7272727, 3.2727273, 1.2727273, 5.7272727
+Marcumar                                                           3.2727273, 0.7272727, 5.7272727, 1.2727273
+Statin                                                             0.7272727, 3.2727273, 1.2727273, 5.7272727
+                                                                                                                residuals
+Heartfailure           -0.85280287, -0.60302269, 0.87645982, -0.08703883, 0.64465837, 0.45584231, -0.66254135, 0.06579517
+Corononaryheartdisease         0.3198011, 1.0552897, -1.0444659, 0.1348400, -0.2417469, -0.7977240, 0.7895420, -0.1019294
+Smoker                                                -0.6067799, 1.2814232, -0.8528029, 0.4586825, -0.9686649, 0.6446584
+Femalegender                                                                 0.4020151, -0.8528029, -0.3038949, 0.6446584
+AVR                                                                          -0.6067799, 0.5539117, 0.4586825, -0.4187179
+Hyperlipidemia                                                               -0.6067799, 0.5539117, 0.4586825, -0.4187179
+ACEinhibitor                                                                 0.5539117, -0.6067799, -0.4187179, 0.4586825
+CABG                                                                         0.4522670, -0.3418817, -0.3418817, 0.2584383
+Myocardialinfarction                                                         -0.3337119, 1.0552897, 0.2522625, -0.7977240
+Antiplateletdrug                                                             1.0552897, -0.3337119, -0.7977240, 0.2522625
+DOAC                                                                         -0.3337119, 1.0552897, 0.2522625, -0.7977240
+PCI                                                                          0.1906925, -0.6030227, -0.1441500, 0.4558423
+Ca.antagonist                                                                0.1906925, -0.6030227, -0.1441500, 0.4558423
+Type.IIdiabetes                                                              -0.5330018, 0.8703883, 0.4029115, -0.6579517
+Pulmonaryhypertension                                                        -1.3483997, 1.2309149, 1.0192944, -0.9304842
+COPD                                                                     0.05330018, -0.08703883, -0.04029115, 0.06579517
+AT1antagonist                                                            0.05330018, -0.08703883, -0.04029115, 0.06579517
+\\beta.blocker                                                               0.3198011, -0.1507557, -0.2417469, 0.1139606
+Loopdiuretic                                                                 0.3198011, -0.1507557, -0.2417469, 0.1139606
+Marcumar                                                                     -0.1507557, 0.3198011, 0.1139606, -0.2417469
+Statin                                                                       0.3198011, -0.1507557, -0.2417469, 0.1139606
+                                                                                                           stdres
+Heartfailure           -1.1818737, -0.7928250, 1.4876476, -0.1279416, 1.1818737, 0.7928250, -1.4876476, 0.1279416
+Corononaryheartdisease 0.4432026, 1.3874437, -1.5352989, 0.2288689, -0.4432026, -1.3874437, 1.5352989, -0.2288689
+Smoker                                              -1.029910, 2.013665, -1.181874, 1.029910, -2.013665, 1.181874
+Femalegender                                                             1.181874, -1.181874, -1.181874, 1.181874
+AVR                                                                          -1.02991, 1.02991, 1.02991, -1.02991
+Hyperlipidemia                                                               -1.02991, 1.02991, 1.02991, -1.02991
+ACEinhibitor                                                                 1.02991, -1.02991, -1.02991, 1.02991
+CABG                                                                 0.7107053, -0.7107053, -0.7107053, 0.7107053
+Myocardialinfarction                                                     -1.387444, 1.387444, 1.387444, -1.387444
+Antiplateletdrug                                                         1.387444, -1.387444, -1.387444, 1.387444
+DOAC                                                                     -1.387444, 1.387444, 1.387444, -1.387444
+PCI                                                                      0.792825, -0.792825, -0.792825, 0.792825
+Ca.antagonist                                                            0.792825, -0.792825, -0.792825, 0.792825
+Type.IIdiabetes                                                          -1.279416, 1.279416, 1.279416, -1.279416
+Pulmonaryhypertension                                                    -2.288689, 2.288689, 2.288689, -2.288689
+COPD                                                                 0.1279416, -0.1279416, -0.1279416, 0.1279416
+AT1antagonist                                                        0.1279416, -0.1279416, -0.1279416, 0.1279416
+\\beta.blocker                                                       0.4432026, -0.4432026, -0.4432026, 0.4432026
+Loopdiuretic                                                         0.4432026, -0.4432026, -0.4432026, 0.4432026
+Marcumar                                                             -0.4432026, 0.4432026, 0.4432026, -0.4432026
+Statin                                                               0.4432026, -0.4432026, -0.4432026, 0.4432026</code></pre>
+<pre class="r"><code>### now run t.test for the continous variables
 cont.target= target[,1:35] %&gt;% select(-sampleID)
 
 ttest.res= map(colnames(cont.target), function(x){
-  #print(x)
   if( is.numeric(target[[x]])){
     fib.samples= target %&gt;% filter(sampleID %in% cluster.fib)
     n.fib=  target %&gt;% filter(!sampleID %in% cluster.fib)
     if(sum(!is.na(fib.samples[[x]]))&gt;2 &amp; sum(!is.na(n.fib[[x]]))&gt;2){
       test.res= t.test( n.fib[[x]], fib.samples[[x]])
       return(c(test.res$statistic, test.res$p.value))
-      #get.it= c(test.res$p.value, test.res$estimate)
       
     }
-    #return(get.it)
+    
   }
   return(NULL)
 })
@@ -1447,9 +1694,7 @@ ttest.res %&gt;% arrange(desc(logp)) %&gt;% print(n=200)</code></pre>
 25 Urea                -0.243  0.814  0.0896
 26 MCHC                 0.232  0.822  0.0853
 27 Lipase              -0.0990 0.928  0.0325</code></pre>
-<pre class="r"><code>#test.res= fisher.test(x= target$cluster, y= target$CABG)
-
-#print(target %&gt;% select(group, cluster, everything()))</code></pre>
+<p>with the proposed tow patient groups, there seems to be no association with meaningful clinical vars. Sample size is probably too limiting</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1478,10 +1723,11 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] lsa_0.73.2       SnowballC_0.7.0  pheatmap_1.0.12  cowplot_1.1.1   
- [5] decoupleR_0.99.2 dorothea_1.0.1   forcats_0.5.1    stringr_1.4.0   
- [9] dplyr_1.0.6      purrr_0.3.4      readr_1.4.0      tidyr_1.1.3     
-[13] tibble_3.1.1     ggplot2_3.3.5    tidyverse_1.3.1  workflowr_1.6.2 
+ [1] XML_3.99-0.6     lsa_0.73.2       SnowballC_0.7.0  pheatmap_1.0.12 
+ [5] cowplot_1.1.1    decoupleR_0.99.2 dorothea_1.0.1   forcats_0.5.1   
+ [9] stringr_1.4.0    dplyr_1.0.6      purrr_0.3.4      readr_1.4.0     
+[13] tidyr_1.1.3      tibble_3.1.1     ggplot2_3.3.5    tidyverse_1.3.1 
+[17] workflowr_1.6.2 
 
 loaded via a namespace (and not attached):
   [1] colorspace_2.0-1            ellipsis_0.3.2             
@@ -1505,7 +1751,7 @@ loaded via a namespace (and not attached):
  [37] Biobase_2.50.0              cellranger_1.1.0           
  [39] jquerylib_0.1.4             vctrs_0.3.8                
  [41] xfun_0.22                   rvest_1.0.0                
- [43] lifecycle_1.0.0             XML_3.99-0.6               
+ [43] lifecycle_1.0.0             WriteXLS_6.3.0             
  [45] zlibbioc_1.36.0             MASS_7.3-54                
  [47] scales_1.1.1                hms_1.0.0                  
  [49] promises_1.2.0.1            MatrixGenerics_1.2.1       
